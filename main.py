@@ -40,8 +40,7 @@ async def main():
     with open('README.md', 'w', encoding='utf-8') as f:
         f.write('## Thông báo cúp nước Thủ Đức\n')
 
-        # for i, announcement in enumerate(announcements[:6]):
-        for i, announcement in enumerate(announcements):
+        for i, announcement in enumerate(announcements[:6]):
             title = announcement.text.strip().replace('\n', ' ')
             pdf_filename = f'{title}.pdf'
             link = base_url + announcement.find('a').get('href')
