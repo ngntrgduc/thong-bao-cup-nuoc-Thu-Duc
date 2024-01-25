@@ -17,7 +17,6 @@ def delete_images(path='images/'):
     files = [_ for _ in pathlib.Path(path).glob('**/*') if _.is_file()]
     for file in files:
         delete_file(file)
-    print('All images were deleted')
 
 async def convert_to_image(pdf_filename, i, f):
     doc = fitz.open(pdf_filename)
